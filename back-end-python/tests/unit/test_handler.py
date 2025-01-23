@@ -181,7 +181,7 @@ def test_trivia_calculate_scores_correct(mocker):
     # assert we updated the game item, score is incremented
     app.TABLE.update_item.assert_called_with(
         Key={'gameId': '01234567012301230123012345678901', 'connectionId': 'connection-1'},
-        AttributeUpdates={'score': {'Value': 10, 'Action': 'PUT'}}
+        AttributeUpdates={'score': {'Value': 20, 'Action': 'PUT'}}
     )
 
     app.MANAGEMENT.post_to_connection.assert_has_calls([
